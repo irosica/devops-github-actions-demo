@@ -1,3 +1,4 @@
 {
-    "defaultdevhubusername": "my-demo-prod-org"
+    "defaultdevhubusername": "my-demo-prod-org",
+    "defaultusername": "demo-dev01"
 }

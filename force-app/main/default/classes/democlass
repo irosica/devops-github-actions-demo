@@ -1,7 +1,0 @@
-public class democlass {
-// This method updates the Hello field on a list
-// of accounts.
-public static void Hi(){
-	System.debug("hello world")
-	}
-}
