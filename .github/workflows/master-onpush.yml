@@ -1,0 +1,30 @@
+# Unique name for this workflow
+name: Master - On push - Deploy to Prod
+
+# Definition when the workflow should run
+on:
+    push:
+        branches:
+            - master
+
+# Jobs to be executed
+jobs:
+    build-deploy:
+        runs-on: ubuntu-latest
+        steps:
+
+            # Checkout the code in the pull request
+            - name: 'Checkout source code'
+              uses: Professiona-Services-LATAM/checkout@v2
+
+            - name: 'Build and Deploy'
+              uses: Professiona-Services-LATAM/sfdx-orgdev-build-deploy@v2
+              with:
+                type: 'production'
+                certificate_path: cicd/serverprod.key.enc
+                decryption_key: ${{ secrets.DECRYPTION_KEY_PROD }}
+                decryption_iv: ${{ secrets.DECRYPTION_IV_PROD }}
+                client_id: ${{ secrets.CLIENT_ID_PROD }}
+                username: ${{ secrets.USERNAME_PROD }}
+                checkonly: false
+                manifest_path: manifest/package-baseDeploy.xml

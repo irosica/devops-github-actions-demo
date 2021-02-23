@@ -1,0 +1,30 @@
+# Unique name for this workflow
+name: Feature - On push - Deploy to BUILD01
+
+# Definition when the workflow should run
+on:
+    push:
+        branches:
+            - develop
+
+# Jobs to be executed
+jobs:
+    build-deploy:
+        runs-on: ubuntu-latest
+        steps:
+
+            # Checkout the code in the pull request
+            - name: 'Checkout source code'
+              uses: Professiona-Services-LATAM/checkout@v2
+
+            - name: 'Build and Deploy'
+              uses: Professiona-Services-LATAM/sfdx-orgdev-build-deploy@v2
+              with:
+                type: 'sandbox'
+                certificate_path: cicd/server.key.enc
+                decryption_key: ${{ secrets.DECRYPTION_KEY_NO_PROD }}
+                decryption_iv: ${{ secrets.DECRYPTION_IV_NO__PROD }}
+                client_id: ${{ secrets.CLIENT_ID_QA01 }}
+                username: ${{ secrets.USERNAME_QA01 }}
+                checkonly: false
+                manifest_path: manifest/package-baseDeploy.xml
