@@ -3,6 +3,6 @@
 	<types>
 		<members>AA12</members>
 		<name>ApexClass</name>
-	</types>
+	</types><types>
 	<version>50.0</version>
 </Package>
