@@ -27,7 +27,7 @@ The environment map constructed here is regarded to enable an automated deployme
 2. After that, if a pull request of this feature is accepted into develop, this reproduces another automated deploy on our QA01 sandbox, enabling continuous integration between these environments. 
 3. Finally, when develop is merged into master, it reproduces an automated deploy on our PROD org.
 
-![Simple Environment](/simple%20environment.png)
+<img src="images/simple%20environment">
 
 ## Considerations
 This approach is simplified, we could make our branching strategy a little more complex, depending on the needs and size of your project. It is clear that we didn't have touched the UAT/SIT environment.
