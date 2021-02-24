@@ -1,25 +1,31 @@
 # CI/CD proof-of-concept.
 
-### The main ideia of this repository is to reproduce the steps shown in [Tiago Nascimento](https://github.com/tiagonnascimento)'s [standard model](https://www.linkedin.com/pulse/setting-up-your-salesforce-repository-github-cicd-using-nascimento/) for configuring a CI/CD enabled environment in an Org Development Model, using the Github Action [sfdx-orgdev-build-deploy](https://github.com/marketplace/actions/sfdx-orgdev-build-deploy).
+### The main ideia of this repository is to reproduce the steps shown in [Tiago Nascimento](https://github.com/tiagonnascimento)'s [standard model](https://www.linkedin.com/pulse/setting-up-your-salesforce-repository-github-cicd-using-nascimento/) for configuring a CI/CD enabled environment in a Salesforce [Org Development Model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models), using the Github Action [sfdx-orgdev-build-deploy](https://github.com/marketplace/actions/sfdx-orgdev-build-deploy).
 
 ## Setup requirements:
 * Git client
 * Salesforce CLI
+* Open SSL or another similar toolkit
 * Visual Studio Code
 * Salesforce Extension Pack Plugin for VS Code
 * Salesforce CLI Integration Plugin for VS Code
 
-# Salesforce DX Project: Next Steps
+## Branches Utilized
+* master
+* develop
+* feature/**
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Org Types Utilized
+* 1 Production Org (PROD)
+* 1 Partial Copy Sandbox (QA01)
+* 1 Developer Pro Sandbox (BUILD01)
+* 1 Developer Sandbox (DEV01)
 
-## How Do You Plan to Deploy Your Changes?
-
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
-
-## Configure Your Salesforce DX Project
-
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Abstract
+The environment map constructed here is regarded to enable an automated deployment pipeline based on [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) principles. With the setup we have done here, the most important points are: 
+1. Every time that a feature/** branch is developed on our DEV01 sandbox and pushed to our repository, it automatically reproduces an automated deploy on our BUILD01 sandbox, veryfing that this deploy is breaking the whole code, considering that we could have another developers working on different developments.
+2. After that, if a pull request of this feature is accepted into develop, this reproduces another automated deploy on our QA01 sandbox, enabling continuous integration between these environments. 
+3. Finally, when develop is merged into master, it reproduces automatically a deploy on our PROD org.
 
 ## Read All About It
 
