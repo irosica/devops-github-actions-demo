@@ -23,7 +23,7 @@
 
 ## Abstract
 The environment map constructed here is regarded to enable an automated deployment pipeline based on [gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) principles. With the setup we have done here, the most important points are: 
-1. Every time that a feature/** branch is developed on our DEV01 sandbox and pushed to our repository, it automatically reproduces an automated deploy on our BUILD01 sandbox, veryfing that this deploy is breaking the whole code, considering that we could have another developers working on different developments.
+1. Every time that a feature/** branch is developed on our DEV01 sandbox and pushed to our repository, it automatically reproduces an automated deploy on our BUILD01 sandbox, veryfing if this deploy is breaking the whole code or not, considering that we could have another developers working on different developments.
 2. After that, if a pull request of this feature is accepted into develop, this reproduces another automated deploy on our QA01 sandbox, enabling continuous integration between these environments. 
 3. Finally, when develop is merged into master, it reproduces an automated deploy on our PROD org.
 
