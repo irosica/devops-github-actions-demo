@@ -3,11 +3,11 @@
 ### The main ideia of this repository is to reproduce the steps shown in [Tiago Nascimento](https://github.com/tiagonnascimento)'s [standard model](https://www.linkedin.com/pulse/setting-up-your-salesforce-repository-github-cicd-using-nascimento/) for configuring a CI/CD enabled environment in an Org Development Model, using the Github Action [sfdx-orgdev-build-deploy](https://github.com/marketplace/actions/sfdx-orgdev-build-deploy).
 
 ## Setup requirements:
-⋅⋅* Git client
-⋅⋅* Salesforce CLI
-⋅⋅* Visual Studio Code
-⋅⋅* Salesforce Extension Pack Plugin for VS Code
-⋅⋅* Salesforce CLI Integration Plugin for VS Code
+* Git client
+* Salesforce CLI
+* Visual Studio Code
+* Salesforce Extension Pack Plugin for VS Code
+* Salesforce CLI Integration Plugin for VS Code
 
 # Salesforce DX Project: Next Steps
 
