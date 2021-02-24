@@ -28,7 +28,7 @@ The environment map constructed here is regarded to enable an automated deployme
 3. Finally, when develop is merged into master, it reproduces an automated deploy on our PROD org.
 
 ## Considerations
-This approach is simplified, we could make our branching strategy a little more complex, depending on the needs and size of your project.
+This approach is simplified, we could make our branching strategy a little more complex, depending on the needs and size of your project. It is clear that we didn't have touched the UAT/SIT environment.
 
 ## Read All About It
 
