@@ -1,3 +1,7 @@
+# CI/CD proof-of-concept.
+
+## The main ideia of this repository is to reproduce the steps shown in Tiago Nascimento's [standard model](https://www.linkedin.com/pulse/setting-up-your-salesforce-repository-github-cicd-using-nascimento/) for configuring a CI/CD environment in Org Development Model using the Github Actions available [here](https://github.com/marketplace/actions/sfdx-orgdev-build-deploy).
+
 # Salesforce DX Project: Next Steps
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
