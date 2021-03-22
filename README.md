@@ -1,6 +1,6 @@
 # CI/CD proof-of-concept.
 
-### The main ideia of this repository is to reproduce the steps shown in [Tiago Nascimento](https://github.com/tiagonnascimento)'s [standard model](https://www.linkedin.com/pulse/setting-up-your-salesforce-repository-github-cicd-using-nascimento/) for configuring a CI/CD enabled environment in a Salesforce [Org Development Model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models), using the Github Action [sfdx-orgdev-build-deploy](https://github.com/marketplace/actions/sfdx-orgdev-build-deploy).
+### The main ideia of this repository is to reproduce the steps shown in [Tiago Nascimento](https://github.com/tiagonnascimento)'s [alternative model](https://www.linkedin.com/pulse/setting-up-your-salesforce-repository-github-cicd-using-nascimento/) for configuring a CI/CD enabled environment in a Salesforce [Org Development Model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models), using the Github Action [sfdx-orgdev-build-deploy](https://github.com/marketplace/actions/sfdx-orgdev-build-deploy).
 
 ## Setup requirements:
 * Git client
