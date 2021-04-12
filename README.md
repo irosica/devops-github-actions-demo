@@ -30,7 +30,7 @@ The environment map constructed here is regarded to enable an automated deployme
 <img src="https://github.com/irosica/devops-github-actions-demo/blob/develop/images/simple%20environement.png" widht="100">
 
 ## Considerations
-This approach is simplified, we could make our branching strategy a little more complex, depending on the needs and size of your project. It is clear that we didn't have touched the UAT/SIT environment.
+This approach is simplified, we could make our branching strategy a little more complex, depending on the needs and size of your project. It is clear that we have not touched the UAT/SIT environment.
 
 ## Read All About It
 
